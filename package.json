@@ -1,0 +1,65 @@
+{
+    "name": "tag-inserter",
+    "displayName": "Tag Inserter",
+    "description": "Insert HTML tag within text in line or selection",
+    "version": "1.4.0",
+    "publisher": "l7ssha",
+    "author": {
+        "name": "l7ssha"
+    },
+    "keywords": [
+        "html",
+        "insert",
+        "html5",
+        "tag"
+    ],
+    "engines": {
+        "vscode": "^1.15.0"
+    },
+    "categories": [
+        "Formatters",
+        "Linters"
+    ],
+    "activationEvents": [
+        "onCommand:l7ssha.insertTag"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "l7ssha.insertTag",
+                "title": "Insert HTML Tag"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "l7ssha.insertTag",
+                "key": "alt+shift+i",
+                "mac": "cmd+ctrl+i"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "license": "SEE LICENSE IN LICENSE.txt",
+    "bugs": {
+        "url": "https://github.com/l7ssha/TagInserter/issues",
+        "email": "szymon.uglis@hotmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/l7ssha/TagInserter.git"
+    },
+    "homepage": "https://github.com/l7ssha/TagInserter"
+}
